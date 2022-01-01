@@ -6,6 +6,8 @@ body {
     margin: 0;
     height: 100vh;
     text-align: center;
+    background: #cfcbc4;
+    color: #55524b;
 }
 
 .footer, .header {
@@ -13,14 +15,50 @@ body {
 }
 
 .content {
-    width: 75%;
+    width: 60%;
     flex-grow: 1;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .options {
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    justify-content: space-evenly;
+    height: 480px;
+    box-sizing: border-box;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;;
+}
+
+button {
+    background: #cfcbc4;
+    color: #55524b;
+    height: 30px;
+    width: 150px;
+    font-weight: bold;
+    font-size: 1.17em;
+    font-family: serif;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button.on {
+    background: #55524b;
+    color: #cfcbc4;
+}
+
+.grid-border {
+    border: 1px solid rgba(0, 0, 0, 0.2)
 }
 
 .canvas-container {
@@ -54,9 +92,99 @@ h1 {
 
 #color-picker::-webkit-color-swatch {
     border-radius: 100px;
-    border: solid;
+    border: 1px solid #55524b;
+    box-shadow: 1px 1px 1px #000000, 0 0 1px #0d0d0d;
+}
+
+#color-picker::-webkit-color-swatch-wrapper {
+    padding: 0;
+    background: #cfcbc4;
 }
 
 #color-picker:hover {
     transform: scale(1.1);
+}
+
+.options>div>h3 {
+    margin: 0;
+}
+
+#range-text {
+    margin-bottom: 10px;
+}
+
+/* style the range slider */
+
+/* turn the slider invisible */
+
+input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 100%; /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  
+  input[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  }
+  
+  input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+  
+    /* Hides the slider so custom styles can be added */
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+  }
+
+  /* apply style */
+
+  /* style thumb */
+
+  input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      border: 1px solid #000000;
+      height: 36px;
+      width: 16px;
+      border-radius: 3px;
+      background: #cfcbc4;
+      cursor: pointer;
+      margin-top: -14px;
+      box-shadow: 1px 1px 1px #000000, 0 0 1px #0d0d0d;
+  }
+
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #cfcbc4;
+    cursor: pointer;
+  }
+
+input[type=range]::-ms-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #cfcbc4;
+    cursor: pointer;
+}
+
+/* style track */
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0 0 1px #0d0d0d;
+    background: #55524b;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
 }

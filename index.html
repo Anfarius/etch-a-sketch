@@ -10,15 +10,23 @@
 </head>
 <body>
     <div class="header">
-        <h1>Eatch-a-Sketch</h1>
+        <h1>Etch-a-Sketch</h1>
     </div>
     <div class="content">
         <div class="options">
-            <h2>Options</h2>
-            <input type="color" id="color-picker" />
+            <input type="color" id="color-picker" value="#55524b" />
+            <div class="buttons">
+                <button id="show-grid" class="on">Show Grid</button>
+                <button id="rainbow">Rainbow Mode</button>
+                <button id="clear">Clear Canvas</button> 
+            </div>
+            <div>
+                <h3>Canvas Size:</h3>
+                <h3 id="range-text">16 x 16</h3>
+                <input type="range" id="canvas-size-range" value="16" min="4" max="100">
+            </div>
         </div>
         <div class="canvas-container">
-            <h2>Canvas</h2>
             <div class="canvas"></div>
         </div>
     </div>
